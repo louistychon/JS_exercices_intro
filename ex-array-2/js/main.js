@@ -1,0 +1,84 @@
+//Supprimer le dernier élément de l'array
+
+let monTab = ['pomme', 'fraise', 'melon', 'citron'];
+monTab = monTab.slice(0, -1);
+console.log(monTab);
+
+//Supprimer le premier élément de l'array
+
+monTab.shift();
+console.log(monTab);
+
+// Ajouter un élément a la fin de l'array
+
+monTab.push("prune");
+console.log(monTab);
+
+//Ajouter un élément au debut de l'array
+
+monTab.unshift("courgette");
+console.log(monTab);
+
+//Mettre le deuxième élément en majuscule 
+
+monTab[1] = monTab[1].toUpperCase();
+console.log(monTab);
+
+//Changer l'ordre de l'array -> trié par ordre ascii 
+
+monTab.sort();
+console.log(monTab);
+
+//Ordonner les chiffres
+
+let chiffres = [4, 5, 2, 1, 3];
+
+// chiffres.sort();
+// console.log(chiffres);
+
+//Concaténer les chiffres en un string
+
+let chiffres_text = chiffres.toString();
+chiffres_text = chiffres_text.split(',').sort().join('-');
+console.log(chiffres_text);
+
+// Utiliser une méthode qui permet de revenir la chaine de caractères en un tableau +  ## Afficher l'array avec les chiffres ordonnées
+
+array = chiffres_text.split('-');
+console.log(array);
+
+//Créez un tableau vide
+
+table = [];
+
+table.push("jordan", "mickael", "julien", "norman", "vivien", "Laurann", "Amélie", "Bernard", "Inez", "hervé")
+
+//contenu de l'array
+
+console.log(table);
+
+//taille de l'array
+
+console.log(table.length);
+
+//Touvez l'index de chaque élément
+
+console.log(table.indexOf("julien"));
+
+//Utiliser une methode qui permet de supprimer un element grâce à l'index
+
+let todelete = table.indexOf("julien")
+table.splice(todelete,1);
+console.log(table);
+
+//Créez un tableau vide et rajoutez toutes les personnes de la classe. Faite un console.log de quelqu'un aléatoirement dans le tableau
+
+let eleves = [];
+eleves.push("Faisal", "Félicien", "Koumeil", "Sarah", "Maxime", "Yves", "Mounia","Liri", "Sylvaine", "Zakaria", "Louis", "Anis")
+
+var randomID = eleves[Math.floor(Math.random()*eleves.length)];
+console.log(randomID);
+
+//En une ligne supprimer 'Anis' du tableau
+eleves.splice(11);
+console.log(eleves);
