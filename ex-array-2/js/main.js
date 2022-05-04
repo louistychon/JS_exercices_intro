@@ -1,60 +1,60 @@
-//Supprimer le dernier élément de l'array
+// Supprimer le dernier élément de l'array
 
-let monTab = ['pomme', 'fraise', 'melon', 'citron'];
-//méthode 1
-monTab = monTab.slice(0, -1);
+// let monTab = ['pomme', 'fraise', 'melon', 'citron'];
+// //méthode 1
+// monTab = monTab.slice(0, -1);
 
-//méthode 2 
-//monTab = monTab.slice(3, 1);
-//méthode 3
-//monTab.pop();
+// //méthode 2 
+// //monTab = monTab.slice(3, 1);
+// //méthode 3
+// //monTab.pop();
 
-console.table(monTab);
+// console.table(monTab);
 
-//Supprimer le premier élément de l'array
+// //Supprimer le premier élément de l'array
 
-monTab.shift();
-console.table(monTab);
+// monTab.shift();
+// console.table(monTab);
 
-// Ajouter un élément a la fin de l'array
+// // Ajouter un élément a la fin de l'array
 
-monTab.push("prune");
-console.table(monTab);
+// monTab.push("prune");
+// console.table(monTab);
 
-//Ajouter un élément au debut de l'array
+// //Ajouter un élément au debut de l'array
 
-monTab.unshift("courgette");
-console.table(monTab);
+// monTab.unshift("courgette");
+// console.table(monTab);
 
-//Mettre le deuxième élément en majuscule 
+// //Mettre le deuxième élément en majuscule 
 
-monTab[1] = monTab[1].toUpperCase();
-console.table(monTab);
+// monTab[1] = monTab[1].toUpperCase();
+// console.table(monTab);
 
-//Changer l'ordre de l'array -> trié par ordre ascii 
+// //Changer l'ordre de l'array -> trié par ordre ascii 
 
-monTab.sort();
-console.table(monTab);
+// monTab.sort();
+// console.table(monTab);
 
-//Ordonner les chiffres
+// //Ordonner les chiffres
 
-let chiffres = [4, 5, 2, 1, 3];
+// let chiffres = [4, 5, 2, 1, 3];
 
-// chiffres.sort();
-// console.table(chiffres);
+// // chiffres.sort();
+// // console.table(chiffres);
 
-//Concaténer les chiffres en un string
+// //Concaténer les chiffres en un string
 
-let chiffres_text = chiffres.toString();
-chiffres_text = chiffres_text.split(',').sort().join('-');
-console.log(chiffres_text);
+// let chiffres_text = chiffres.toString();
+// chiffres_text = chiffres_text.split(',').sort().join('-');
+// console.log(chiffres_text);
 
-// Utiliser une méthode qui permet de revenir la chaine de caractères en un tableau +  ## Afficher l'array avec les chiffres ordonnées
+// // Utiliser une méthode qui permet de revenir la chaine de caractères en un tableau +  ## Afficher l'array avec les chiffres ordonnées
 
-array = chiffres_text.split('-');
-console.table(array);
+// array = chiffres_text.split('-');
+// console.table(array);
 
-//Créez un tableau vide
+// Créez un tableau vide
 
 table = [];
 
@@ -70,7 +70,9 @@ console.table(table.length);
 
 //Touvez l'index de chaque élément
 
-console.table(table.indexOf("julien"));
+for(let i = 0; i < table.length; i++){
+    console.log(table[i],table.indexOf(table[i]));
+}
 
 //Utiliser une methode qui permet de supprimer un element grâce à l'index
 
