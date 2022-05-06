@@ -86,7 +86,7 @@
 // let panierfruits = [];
 // let i = 0;
 // let userinput;
-// while (i <= 8) {
+// while (i < 3) {
 //     userinput = prompt('entrez un fruit');
 //     panierfruits.push(userinput)
 //     i++;
@@ -98,7 +98,6 @@
 //     if (retrait == panierfruits[index]) {
 //         panierfruits.splice(index,1);
 //         alert(panierfruits);
-//         retrait = prompt("désirez-vous retirer un fruit? lequel?");
 //     }
 //     index++;
 // }
