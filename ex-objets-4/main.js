@@ -6,7 +6,7 @@ let vieille_dame = {
     objet: "canne",
     parler(){
         if(this.moral === "mal"){
-            console.log("Vous me dérangez! **et le frappe avec son objet")
+            console.log("Vous me dérangez! **et le frappe avec sa " + this.objet)
         }
         else if(this.moral === "bien"){
             console.log("bonjour " + vieil_homme.nom)

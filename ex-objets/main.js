@@ -16,11 +16,13 @@ let personnage2 = {
 }
 //3
 let personnage3 = {
-    nom: 'tychon',
+    nom: personnage.nom,
     prenom: 'xxx',
-    age: 23,
+    age: personnage2.age,
     taille: 137,
 }
+
+console.log(personnage3);
 
 
 
