@@ -1,3 +1,5 @@
+//création class Lieu
+
 class Lieu {
     constructor(nom, personnes){
         this.nom = nom;
@@ -5,11 +7,14 @@ class Lieu {
     }
 }
 
-// let MolenGeek = new Lieu("MolenGeek",[])
-// let Snack = new Lieu("Snack",[]);
-// let Maison = new Lieu("Maison",[]);
-// let i = 0
-// let places_person = [[], [], []];
+
+
+let MolenGeek = new Lieu("MolenGeek",[])
+let Snack = new Lieu("Snack",[]);
+let Maison = new Lieu("Maison",[]);
+let places_person = [[], [], []];
+let i = 0
+
 
 class Personne {
     constructor(nom, prenom, argent){
@@ -18,16 +23,14 @@ class Personne {
         this.argent = argent;
         this.seDeplacer = () => {
             bus.embarquer();
-            // for (let index = 0; index < 3; index++) {
-            //     places_person[index].push(this.prenom);
-            //     console.log(places_person[index]);
-            //     break;
-            // }            
+            if(i > 1)
+            places_person[i].push(this.prenom);
+            i++;
         }
     }
 }
 
-let Faisal = new Personne("Marij", "Faisal", 10);
+let Faisal = new Personne("Marij", "Faisal", 50);
 let Vanessa = new Personne("Marij", "Vanessa", 100);
 let prix_bus = 2.8;
 
@@ -60,6 +63,8 @@ Faisal.seDeplacer()
 console.log(Faisal.argent)
 console.log(bus.caisse)
 //17h10
+Faisal.seDeplacer() // Faisal se retrouve donc dans le 3 eme lieu
+console.log(Faisal.argent) // il a dépense 3x 2.80 = 8.40
+console.log(bus.caisse) // la caisse du bus a été augmentée de 8.40
 
-console.log(Faisal.argent)
-console.log(bus.caisse)
+console.log(places_person)
