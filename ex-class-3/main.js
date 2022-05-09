@@ -16,6 +16,7 @@ class Personnage{
         this.argent = argent;
         this.prendre = (Objet) => {
             this.sac.push(Objet);
+            tableau.splice(Objet,0);
         } 
         this.acheter = (vendeur, Objet) => {
            if(this.argent >= Objet.prix){
@@ -36,17 +37,17 @@ let zakaria = new Personnage("zakaria", [], 100);
 let Faisal = new Personnage("Faisal", [], 50);
 let personnages = [zakaria, Faisal];
 
-// Faisal.prendre(canne);
-// zakaria.prendre(baton);
-// console.table(Faisal.sac);
-// console.table(zakaria.sac);
-// zakaria.acheter(Faisal, canne);
-// console.table(Faisal.sac);
-// console.table(zakaria.sac);
-// console.table(zakaria.argent);
-// console.table(Faisal.argent);
-// console.table(Faisal.sac);
-// Faisal.acheter(zakaria, canne);
-// console.table(Faisal.sac);
-// console.table(zakaria.argent);
-// console.table(Faisal.argent);
+Faisal.prendre(canne);
+zakaria.prendre(baton);
+console.table(Faisal.sac);
+console.table(zakaria.sac);
+zakaria.acheter(Faisal, canne);
+console.table(Faisal.sac);
+console.table(zakaria.sac);
+console.table(zakaria.argent);
+console.table(Faisal.argent);
+console.table(Faisal.sac);
+Faisal.acheter(zakaria, canne);
+console.table(Faisal.sac);
+console.table(zakaria.argent);
+console.table(Faisal.argent);

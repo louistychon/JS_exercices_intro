@@ -5,9 +5,11 @@ class Lieu {
     }
 }
 
-let MolenGeek = new Lieu("MolenGeek",[])
-let Snack = new Lieu("Snack",[]);
-let Maison = new Lieu("Maison",[]);
+// let MolenGeek = new Lieu("MolenGeek",[])
+// let Snack = new Lieu("Snack",[]);
+// let Maison = new Lieu("Maison",[]);
+// let i = 0
+// let places_person = [[], [], []];
 
 class Personne {
     constructor(nom, prenom, argent){
@@ -16,12 +18,17 @@ class Personne {
         this.argent = argent;
         this.seDeplacer = () => {
             bus.embarquer();
+            // for (let index = 0; index < 3; index++) {
+            //     places_person[index].push(this.prenom);
+            //     console.log(places_person[index]);
+            //     break;
+            // }            
         }
     }
 }
 
-let Faisal = new Personne("Faisal", "Marij", 10);
-let Vanessa = new Personne("Vanessa", "Marij", 100);
+let Faisal = new Personne("Marij", "Faisal", 10);
+let Vanessa = new Personne("Marij", "Vanessa", 100);
 let prix_bus = 2.8;
 
 class Bus {
@@ -42,17 +49,17 @@ class Bus {
     }
 }
 
-let bus = new Bus([Faisal, Vanessa], 0)
+let bus = new Bus([Faisal], 0)
 
 //08h30
 Faisal.seDeplacer();
 console.log(Faisal.argent)
 console.log(bus.caisse)
 //12h45
-Faisal.seDeplacer();
+Faisal.seDeplacer()
 console.log(Faisal.argent)
 console.log(bus.caisse)
 //17h10
-Faisal.seDeplacer();
+
 console.log(Faisal.argent)
 console.log(bus.caisse)
